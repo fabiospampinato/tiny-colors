@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-const {default: colors} = require ( '../dist' );
+import colors from '../dist/index.js';
 
 /* MAIN */
 

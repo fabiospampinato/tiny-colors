@@ -1,29 +1,19 @@
 {
   "name": "tiny-colors",
+  "repository": "github:fabiospampinato/tiny-colors",
   "description": "A tiny library providing the basic ANSI colors for the terminal.",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist",
-    "compile": "tsc --skipLibCheck && tstei",
-    "compile:watch": "tsc --skipLibCheck --watch",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
     "test:color": "node test/index.js",
     "test:nocolor": "NO_COLOR=1 node test/index.js",
     "test": "npm run test:color && npm run test:nocolor",
     "prepublishOnly": "npm run clean && npm run compile && npm run test"
-  },
-  "bugs": {
-    "url": "https://github.com/fabiospampinato/tiny-colors/issues"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "Fabio Spampinato",
-    "email": "spampinabio@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fabiospampinato/tiny-colors.git"
   },
   "keywords": [
     "tiny",
@@ -32,9 +22,7 @@
     "colors"
   ],
   "devDependencies": {
-    "@types/node": "^17.0.23",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.3",
-    "typescript-transform-export-interop": "^1.0.4"
+    "tsex": "^1.0.4",
+    "typescript": "^4.6.3"
   }
 }
