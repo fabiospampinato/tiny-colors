@@ -4,6 +4,7 @@
   "description": "A tiny library providing the basic ANSI colors for the terminal.",
   "version": "2.0.0",
   "type": "module",
+  "main": "dist/index.js",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
