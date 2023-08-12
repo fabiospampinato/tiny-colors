@@ -2,19 +2,32 @@
 /* IMPORT */
 
 import {IS_ENABLED} from './constants';
+import type {Modifier, ChainedModifier, Modifiers} from './types';
 
 /* HELPERS */
 
-const wrap = ( start: number, end: number ) => {
-  return ( string: string ): string => {
+const chain = ( modifier: Modifier ) => {
+  return new Proxy ( modifier, {
+    get ( target, prop ) {
+      if ( prop in colors ) {
+        return chain ( string => modifier ( colors[prop]( string ) ) );
+      } else {
+        return target[prop];
+      }
+    }
+  });
+};
+
+const wrap = ( start: number, end: number ): ChainedModifier => {
+  return chain (( string: string ): string => {
     if ( !IS_ENABLED ) return string;
     return `\u001B[${start}m${string}\u001B[${end}m`;
-  };
+  });
 };
 
 /* MAIN */
 
-const colors = {
+const colors: Modifiers = {
   /* MODIFIERS */
   reset: wrap ( 0, 0 ),
   bold: wrap ( 1, 22 ),

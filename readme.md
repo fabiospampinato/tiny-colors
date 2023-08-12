@@ -29,7 +29,13 @@ The following color functions are provided.
 ```ts
 import colors from 'tiny-colors';
 
-console.log ( colors.bgMagenta ( colors.bold ( 'foo' ) ) );
+// Unchained usage
+
+console.log ( colors.bgMagenta ( colors.italic ( 'foo' ) ) );
+
+// Chained usage
+
+console.log ( colors.bgMagenta.italic ( 'foo' ) );
 ```
 
 ## License
