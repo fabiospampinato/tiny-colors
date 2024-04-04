@@ -1,9 +1,14 @@
 
 /* MAIN */
 
-type Modifier = ( string: string ) => string;
-
 type ChainedModifier = Modifier & Modifiers;
+
+type ColorModifier = 'reset' | 'bold' | 'dim' | 'italic' | 'underline' | 'overline' | 'inverse' | 'hidden' | 'strikethrough';
+type ColorForeground = 'black' | 'red' | 'green' | 'yellow' | 'blue' | 'magenta' | 'cyan' | 'white' | 'gray';
+type ColorBackground = 'bgBlack' | 'bgRed' | 'bgGreen' | 'bgYellow' | 'bgBlue' | 'bgMagenta' | 'bgCyan' | 'bgWhite' | 'bgGray';
+type Color = ColorModifier | ColorForeground | ColorBackground;
+
+type Modifier = ( string: string ) => string;
 
 type Modifiers = {
   /* MODIFIERS */
@@ -40,4 +45,4 @@ type Modifiers = {
 
 /* EXPORT */
 
-export type {Modifier, ChainedModifier, Modifiers};
+export type {ChainedModifier, Color, Modifier, Modifiers};

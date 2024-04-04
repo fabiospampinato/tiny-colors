@@ -2,7 +2,7 @@
 /* IMPORT */
 
 import {IS_ENABLED} from './constants';
-import type {Modifier, ChainedModifier, Modifiers} from './types';
+import type {ChainedModifier, Color, Modifier, Modifiers} from './types';
 
 /* HELPERS */
 
@@ -63,3 +63,4 @@ const colors: Modifiers = {
 /* EXPORT */
 
 export default colors;
+export type {Color};
