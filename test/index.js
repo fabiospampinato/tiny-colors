@@ -1,10 +1,12 @@
 
 /* IMPORT */
 
-import colors from '../dist/index.js';
+import colors, {ENABLED} from '../dist/index.js';
 
 /* MAIN */
 
+console.log ( ENABLED );
+console.log ( '' );
 console.log ( colors.black ( 'black' ) );
 console.log ( colors.red ( 'red' ) );
 console.log ( colors.green ( 'green' ) );

@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-import {IS_ENABLED} from './constants';
+import {ENABLED} from './constants';
 import type {ChainedModifier, Color, Modifier, Modifiers} from './types';
 
 /* HELPERS */
@@ -20,7 +20,7 @@ const chain = ( modifier: Modifier ) => {
 
 const wrap = ( start: number, end: number ): ChainedModifier => {
   return chain (( string: string ): string => {
-    if ( !IS_ENABLED ) return string;
+    if ( !ENABLED ) return string;
     return `\u001B[${start}m${string}\u001B[${end}m`;
   });
 };
@@ -63,4 +63,5 @@ const colors: Modifiers = {
 /* EXPORT */
 
 export default colors;
+export {ENABLED};
 export type {Color};
