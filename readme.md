@@ -27,7 +27,7 @@ The following color functions are provided.
 ## Usage
 
 ```ts
-import colors from 'tiny-colors';
+import colors, {ENABLED} from 'tiny-colors';
 
 // Unchained usage
 
@@ -36,6 +36,10 @@ console.log ( colors.bgMagenta ( colors.italic ( 'foo' ) ) );
 // Chained usage
 
 console.log ( colors.bgMagenta.italic ( 'foo' ) );
+
+// Check if colors will actually be displayed
+
+console.log ( ENABLED ); // => true/false
 ```
 
 ## License
