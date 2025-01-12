@@ -5,7 +5,7 @@ A tiny library providing the basic ANSI colors for the terminal.
 ## Install
 
 ```sh
-npm install --save tiny-colors
+npm install tiny-colors
 ```
 
 ## Colors
