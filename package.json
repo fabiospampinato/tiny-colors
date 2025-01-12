@@ -2,6 +2,7 @@
   "name": "tiny-colors",
   "repository": "github:fabiospampinato/tiny-colors",
   "description": "A tiny library providing the basic ANSI colors for the terminal.",
+  "license": "MIT",
   "version": "2.2.1",
   "type": "module",
   "main": "dist/index.js",
@@ -20,10 +21,11 @@
     "tiny",
     "cli",
     "terminal",
+    "color",
     "colors"
   ],
   "devDependencies": {
     "tsex": "^4.0.2",
-    "typescript": "^5.5.0-beta"
+    "typescript": "^5.7.3"
   }
 }
