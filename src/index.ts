@@ -38,7 +38,7 @@ const colors: Modifiers = {
   inverse: wrap ( 7, 27 ),
   hidden: wrap ( 8, 28 ),
   strikethrough: wrap ( 9, 29 ),
-  /* FOREGOUND */
+  /* FOREGROUND */
   black: wrap ( 30, 39 ),
   red: wrap ( 31, 39 ),
   green: wrap ( 32, 39 ),
