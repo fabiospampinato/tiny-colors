@@ -21,7 +21,7 @@ type Modifiers = {
   inverse: ChainedModifier,
   hidden: ChainedModifier,
   strikethrough: ChainedModifier,
-  /* FOREGOUND */
+  /* FOREGROUND */
   black: ChainedModifier,
   red: ChainedModifier,
   green: ChainedModifier,
